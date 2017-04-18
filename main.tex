@@ -16,164 +16,187 @@
 }
 %++++++++++++++++++++++++++++++++++++++++
 
-
 \begin{document}
 
-\title{Title of the Report}
-\author{A. Partner, B. Partner, and C. Partner}
+\title{TEM Alignment for \texttt{JEOL 2010F} }
+\author{Veerendra C Angadi}
 \date{\today}
 \maketitle
 
 \begin{abstract}
-In this experiment we studied a very important physical effect by measuring the
-dependence of a quantity $V$ of the quantity $X$ for two different sample
-temperatures.  Our experimental measurements confirmed the quadratic dependence
-$V = kX^2$ predicted by Someone's first law. The value of the mystery parameter
-$k = 15.4\pm 0.5$~s was extracted from the fit. This value is
-not consistent with the theoretically predicted $k_{theory}=17.34$~s. We attribute this
-discrepancy to low efficiency of our $V$-detector.
+The report provides initial and necessary alignments for cold field emission gun (FEG) transmission electron microscope (TEM). It also includes the initial settings for the TEM, which gives a sanity check for the state of the system. The report follows the column alignments from top of the TEM to the bottom. The camera setup includes charge couple device (CCD) gain correction and Gatan imaging filter (GIF) tuning. Training for TEM alignment was done on \texttt{JEOL 2010F} TEM located at Sorby Centre - North Campus, University of Sheffield on 29$^{th}$ March and 7$^{th}$ April 2017 (9am - 1pm). Further instrument details can be found \href{https://www.sheffield.ac.uk/eee/research/microscopy/fegtem_instrument_details}{\underline{here}}.
 \end{abstract}
 
+\section{Initial Setting}
 
-\section{Introduction}
+It is important to note the initial settings of the TEM. The values indicate the initial state of the system and these should be the settings when one arrives for an experiment.
 
-The very important physical effect has applications to astronomy, nuclear physics, condensed matter, and more. 
+\begin{itemize}
+\item In the LP\footnotemark[1], on TEM schematic, following valves should be showing green light. \texttt{V17, V13, V5B} and \texttt{V2}.
+\item \texttt{Monitor}, \texttt{HT/$\mu$A}, \texttt{Emission} should have light.
+\item On cathode ray tube (CRT) screen on the right should read, $40$k \texttt{Mag}, \texttt{TEM mode}, \texttt{spot size}$=1$, \texttt{$\alpha$3}$=-3$, $200$kV, \texttt{X}$=0$, \texttt{Y}$=0$, \texttt{Z}$=0$, \texttt{Focus}$=+0$. If \texttt{Focus} is not at $+0$, then use \texttt{objective focus} knob (RS\footnotemark[1]) to bring it to $0$.
+\item \texttt{Column Ion Gun} should be below $20\times10^{-5}$Pa. The \texttt{Column Ion Gun} reading is present in the room behind TEM.
+\end{itemize}
 
+\footnotemark[1]
+\textbf{Note:} The following abbreviation mean the side in which a particular control is present. e.g. LP = left panel, RS = right side, LS = left side, RD = right drawer, LD = left drawer, LT = left top and TC = top side of TEM column.
 
-\section{Theory}
+\section{Anti-contamination device}
+Handling any cryogenics with bare hands can be fatal. Before handling liquid nitrogen, it is important to have risk assessment and required training done. The safety equipment such as gloves and goggles are placed near TEM. Always wear them whenever refilling liquid nitrogen into thermocol container.
 
-Here give a brief summary of the physical effect of interest and provide
-necessary equations. Here is how you insert an equation. According to
-references~\cite{melissinos, Cyr, Wiki} the dependence of interest is given
-by
-\begin{equation} \label{eq:aperp} % the label is used to reference the equation
-u(\lambda,T)=\frac{8\pi hc\lambda^{-5}}{e^{hc/\lambda kT}-1},
-\end{equation}
-where T is temperature in Kelvin, c is the speed of light, etc. Don't forget to
-explain what each variable means the first time that you introduce it.
+Remove the heater from anti-contamination device (ACD) by sliding the coils first and then removing the heater assembly. Cover the glass part of the TEM with a coat. Use a funnel and a plastic mug to fill the ACD with the liquid nitrogen (Use ladder to fill). It is important to use safety equipment all the time during this procedure. After filling ACD with liquid nitrogen, leave the funnel there for few seconds. Liquid nitrogen oozes out for a second and then fill again until full. Cover it with the small top. (Note: If small amount liquid nitrogen is left in the thermocol container, then it can be put in to EDXS detector. This is not a mandatory step).
 
+\section{Single tilt holder}
+While handling any sample holder, wearing a clean new gloves is important. Following steps should be followed while mounting the sample on to single tilt holder.
 
-\section{Procedures}
+\begin{itemize}
+\item Loosen the screws of sample holder part.
+\item Mount the sample (Gold nano particles on Single tilt holder).
+\item Tighten the screws (do not tighten hard).
+\item Using a clean tooth pick (or tweezers) clean the holder and oval rings. Look for fibre like strands.
+\end{itemize}
+Make sure the holder is clean and free from fibre strands. Unless these causes problem in maintaining vacuum.
 
-Give a schematic of the experimental setup(s) used in the experiment (see
-figure~\ref{fig:samplesetup}). Give the description of  abbreviations
-either in the figure caption or in the text. Write a description of what is
-going on. 
+\section{Inserting sample holder in TEM}
+\begin{itemize}
+\item Put the holder in and switch to pump.
+\item Wait until the pump switch turns green. This process takes few minutes. The progress of the pumps switching can be observed in the TEM schematic (LP\footnotemark[1]).
+\item Rotate the holder clockwise just a little bit and insert the holder completely in a controlled manner. Do not let the holder get sucked in  forcefully as this can damage the holder. This may cause serious problems in maintaining vacuum in the system.
+\item In the mean time check the \texttt{Column Ion Gun} meter in the room behind TEM. This must go $<20\times10^{-5}$Pa.
+\end{itemize}
 
-\begin{figure}[ht] 
-        % read manual to see what [ht] means and for other possible options
-        \centering \includegraphics[width=0.8\columnwidth]{sr_setup}
-        % note that in above figure file name, "sr_setup",
-        % the file extension is missing. LaTeX is smart enough to find
-        % apropriate one (i.e. pdf, png, etc.)
-        % You can add this extention yourself as it seen below
-        % both notations are correct but above has more flexibility
-        %\includegraphics[width=1.0\columnwidth]{sr_setup.pdf}
-        \caption{
-                \label{fig:samplesetup} % spaces are big no-no withing labels
-                % things like fig: are optional in the label but it helps
-                % to orient yourself when you have multiple figures,
-                % equations and tables
-                Every figure MUST have a caption.
-        }
-\end{figure}
+\section{Condenser alignment}
+\begin{itemize}
+\item Open \texttt{Valve} (LS\footnotemark[1]).
+\item Reduce \texttt{Mag} and move the sample to see illumination.
+\item Condenser (\texttt{C2} or Brightness control), use shift \texttt{X} and \texttt{Y} to move the beam to centre.
+\item Spread the beam to make it almost edge of the screen using \texttt{C2}.
+\item Usually use large condenser aperture (TC\footnotemark[1]) for condenser alignment.
+	\begin{itemize}
+	\item Select an aperture (TC\footnotemark[1]).
+	\item Use knobs on aperture assembly to bring it to the centre.
+	\end{itemize}
+\end{itemize}
 
-Don't forget to list all important steps in your experimental procedure!
+\section{Gun lens alignment}
+\begin{enumerate}
+\item Anode wobbler
+	\begin{itemize}
+	\item Reduce beam size (\texttt{C2}) and press \texttt{Anode WOBB} (LS\footnotemark[1]).
+	\item If the beam wobbles, then from RD\footnotemark[1], press \texttt{Deflector/Gun}.
+	\item Use deflector (\texttt{DEF}) \texttt{X} and \texttt{Y} to adjust to make beam go in and out.
+	\item press \texttt{Anode WOBB} again to stop it and go for next alignment.
+	\end{itemize}
+\item Gun tilt alignment
+	\begin{itemize}
+	\item press \texttt{spot size} switch (LS\footnotemark[1]) and go to the smallest spot size i.e. $5$.
+	\item Use \texttt{Beam shift} (left \& right side) to bring it to centre.
+	\item press \texttt{spot size} switch (LS\footnotemark[1]) and go to the largest spot size i.e. $1$.
+	\item Use \texttt{Gun shift} (RD\footnotemark[1]) to bring it to centre.
+	\item Iterate all steps in gun tilt alignment for better alignment.
+	\end{itemize}
+\end{enumerate}
 
-Use active voice either in past or present through all the report and be
-consistent with it:
-The laser light comes  from to ... and eventually arrived to the
-balanced photodiode as seen in the figure~\ref{fig:samplesetup}.
+\section{Condenser lens alignment}
+\begin{itemize}
+\item At $40$k \texttt{Mag}, press \texttt{Condeser Stigmation} (LS\footnotemark[1]).
+\item Use \texttt{DEF X} and \texttt{Y} (left \& right side below \texttt{beam shift}) and make it look round.
+\item press \texttt{Condeser Stigmation} (LS\footnotemark[1]) again to go to next alignment.
+\item press \texttt{Bright tilt deflector} (LS\footnotemark[1]).
+\item Use \texttt{DEF X} \& \texttt{Y} to bring bright spot in the middle of halo.
+\item press \texttt{Bright tilt deflector} (LS\footnotemark[1]) again to go to next alignment.
+\item Use \texttt{Beam shift} to bring it in the centre.
+\end{itemize}
 
-Sentences in the past voice while correct are generally considered hard to read
-in large numbers. The laser light was directed to ..., wave plates were set
-to ... etc.
+\section{Specimen focus}
+\begin{itemize}
+\item Check objective focus (\texttt{DV}) is $0$ (on CRT RS\footnotemark[1]). If \texttt{DV} is not $0$, then use \texttt{Obj focus} (RS\footnotemark[1]) to bring it to $0$.
+\item Adjust condenser knob to see diffraction patter.
+\item Use \texttt{Z} (LT\footnotemark[1]) to adjust to bring it to a spot.
+\item Now adjust \texttt{Condenser beam broad}, adjust \texttt{Z} to see contrast.
+\end{itemize}
 
+\section{Pivot points}
+\begin{itemize}
+\item Bring the beam to a point (Use \texttt{C2}).
+\item press condenser deflector adjust (\texttt{COND DEF ADJ}) from RD\footnotemark[1].
+\item press \texttt{Tilt} button.
+\item Use \texttt{Tilt X}, it will be wobbling.
+\item Use \texttt{X shift} (RD\footnotemark[1]) to bring it to stationary.
+\item Follow same steps for \texttt{Y}.
+\item press \texttt{Tilt} button again to go to next alignment.
+\item Check if the beam is in the centre, use \texttt{Beam shift} (left \& right) to bring it to centre.
+\end{itemize}
 
-\section{Analysis}
+\section{Voltage centre}
+\begin{itemize}
+\item Find an area that we can identify.
+\item Go to focus (use \texttt{Z} to bring it to focus), with a smaller beam size about $1$inch diameter (Use \texttt{C2}).
+\item At focus, contrast will be very low hence use smaller screen to observe feature.
+\item press \texttt{HT} (RS\footnotemark[1]). The feature should be moving up and down. It should not be swinging.
+\item If it is swinging, then press \texttt{Bright tilt} (LS\footnotemark[1]).
+\item Use \texttt{DEF X} and \texttt{Y} (left \& right) to make it move up and down instead of swinging.
+\item press \texttt{Bright tilt} (LS\footnotemark[1]) and \texttt{HT} (RS\footnotemark[1]) again to go to next alignment.
+\end{itemize}
 
-In this section you will need to show your experimental results. Use tables and
-graphs when it is possible. Table~\ref{tbl:bins} is an example.
+\section{Objective stigmation}
+\begin{itemize}
+\item Reduce the \texttt{Mag} to $25$k (or keep $40$k as it is. Not a mandatory to bring it to $25$k).
+\item Sample must be visible on the fluorescence screen. (Better if it is amorphous area).
+\item Lift the screen (RS\footnotemark[1]).
+\item If the Gatan software is closed in the computer, then to open the software use following step.
+\begin{itemize}
+\item Double click on \texttt{Gatan Filter Control} from \texttt{desktop}.
+\item Then open \texttt{Gatan DigitalMicrograph}. 
+\end{itemize}
+\item From Gatan software choose \texttt{TEM panel} (top) (not \texttt{STEM}).
+\item From \texttt{Filter Control panel} (right) insert \texttt{TV camera in}.
+\item Note that on top of the TV, press \texttt{GIF} (not \texttt{TV}).
+\item Need to defocus a little bit by pressing \texttt{Z} (LS\footnotemark[1]) once or twice.
+\item Remove \texttt{TV camera in}.
+\item In \texttt{Camera view panel}, \texttt{setup} must be \texttt{search}, \texttt{Exposure (s)}$=0.4$ and in \texttt{settings}.
+\begin{itemize}
+\item Full image.
+\item Binning$=2$.
+\item \texttt{Corrections} must be \texttt{Gain normalised}.
+\end{itemize}
+\item In \texttt{Camera view panel}, press \texttt{Start}.
+\item From drop menu, \texttt{Process/live/FFT}.
+\item press Stigmator control (\texttt{STIGMATOR}) (RD\footnotemark[1]).
+\begin{itemize}
+\item press \texttt{OBJ}
+\item Use \texttt{DEF X} and \texttt{Y} (RD\footnotemark[1]) to make it round on the screen.
+\end{itemize}
+\end{itemize}
 
-\begin{table}[ht]
-\begin{center}
-\caption{Every table needs a caption.}
-\label{tbl:bins} % spaces are big no-no withing labels
-\begin{tabular}{|cc|} 
-\hline
-\multicolumn{1}{|c}{$x$ (m)} & \multicolumn{1}{c|}{$V$ (V)} \\
-\hline
-0.0044151 &   0.0030871 \\
-0.0021633 &   0.0021343 \\
-0.0003600 &   0.0018642 \\
-0.0023831 &   0.0013287 \\
-\hline
-\end{tabular}
-\end{center}
-\end{table}
+\section{Camera setup}
+\begin{itemize}
+\item Lift the screen (RS\footnotemark[1]).
+\item Go to the place where there is no sample.
+\item From drop menu go to \texttt{Camera/prepare gain reference}. Check following settings.
+\begin{itemize}
+\item \texttt{Target intensity} $6000$.
+\item \texttt{Frames to average} $4$.
+\end{itemize}
+\item Click \texttt{Yes} to following pop-ups.
+\begin{itemize}
+\item \texttt{Is CCD temperature stable?} $-$ Click \texttt{Yes}.
+\item \texttt{Can gain correction be overwritten?} $-$ Click \texttt{Yes}.
+\end{itemize}
+\item Wait until it finishes. (usually takes few minutes).
+\item From drop menu \texttt{Camera/Remove dark reference}.
+\item From \texttt{Camera acquire panel}, click on \texttt{Start acquire}. (it should look blank).
+\item From \texttt{Auto filter panel}, \texttt{Commands panel}, Click on \texttt{Tune GIF}.
+\end{itemize}
 
-Analysis of equation~\ref{eq:aperp} shows ...
-
-Note: this section can be integrated with the previous one as long as you
-address the issue. Here explain how you determine uncertainties for different
-measured values. Suppose that in the experiment you make a series of
-measurements of a resistance of the wire $R$ for different applied voltages
-$V$, then you calculate the temperature from the resistance using a known
-equation and make a plot  temperature vs. voltage squared. Again suppose that
-this dependence is expected to be linear~\cite{Cyr}, and the proportionality coefficient
-is extracted from the graph. Then what you need to explain is that for the
-resistance and the voltage the uncertainties are instrumental (since each
-measurements in done only once), and they are $\dots$. Then give an equation
-for calculating the uncertainty of the temperature from the resistance
-uncertainty. Finally explain how the uncertainty of the slop of the graph was
-found (computer fitting, graphical method, \emph{etc}.)
-
-If in the process of data analysis you found any noticeable systematic
-error(s), you have to explain them in this section of the report.
-
-It is also recommended to plot the data graphically to efficiently illustrate
-any points of discussion. For example, it is easy to conclude that the
-experiment and theory match each other rather well if you look at
-Fig.~\ref{fig:samplesetup} and Fig.~\ref{fig:exp_plots}.
-
-\begin{figure}[ht] 
-  \centering
-      \includegraphics[width=0.5\columnwidth]{sr_squeezing_vs_detuning}
-
-% some figures do not need to be too wide
-        \caption{
-                \label{fig:exp_plots}  
-                Every plot must have axes labeled.
-        }
-\end{figure}
-
-
-\section{Conclusions}
-Here you briefly summarize your findings.
-
-%++++++++++++++++++++++++++++++++++++++++
-% References section will be created automatically 
-% with inclusion of "thebibliography" environment
-% as it shown below. See text starting with line
-% \begin{thebibliography}{99}
-% Note: with this approach it is YOUR responsibility to put them in order
-% of appearance.
-
-\begin{thebibliography}{99}
-
-\bibitem{melissinos}
-A.~C. Melissinos and J. Napolitano, \textit{Experiments in Modern Physics},
-(Academic Press, New York, 2003).
-
-\bibitem{Cyr}
-N.\ Cyr, M.\ T$\hat{e}$tu, and M.\ Breton,
-% "All-optical microwave frequency standard: a proposal,"
-IEEE Trans.\ Instrum.\ Meas.\ \textbf{42}, 640 (1993).
-
-\bibitem{Wiki} \emph{Expected value},  available at
-\texttt{http://en.wikipedia.org/wiki/Expected\_value}.
-
-\end{thebibliography}
-
+\section{Wrap up TEM session}
+\begin{itemize}
+\item \texttt{Mag} $40$k (RS\footnotemark[1]) and put the fluorescent screen down.
+\item press \texttt{Valve} (LS\footnotemark[1]).
+\item press \texttt{N} (LS\footnotemark[1]) to normalize \texttt{X} and \texttt{Y} values to $0$.
+\item Pull sample holder and rotate anti-clockwise. Put switch to \texttt{air}. 
+\item Rotate sample holder again in controlled manner and remove.
+\item At the end of the session (usually end of the day) put heater in ACD and press \texttt{ACD heater} button on LD\footnotemark[1] near TEM pump schematic.
+\end{itemize}
 
 \end{document}
